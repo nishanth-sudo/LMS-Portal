@@ -1,0 +1,35 @@
+given whether the string is binary or not
+Code:
+  s=input()
+  if len(s)>1 and len(s)<100 and all(c in '01' for c in s):
+      print("True")
+  else:
+      print("False")
+
+python program to compress the strings as given input aaabb result a3b2
+Code:
+  from itertools import groupby as gb
+  s=input()
+  re=''
+  for c,g in gb(s):
+      ch=len(list(g))
+      re+=f"{c}{ch}"
+  print(re)
+
+Read and display a set of strings given separated by commas
+For example:
+Input	Result
+Trial, Boys, Car, Now, This
+Trial
+Boys
+Car
+Now
+This
+Street, Show, This
+Street
+Show
+This
+Code:
+  s=input().split(",")
+  for i in s:
+      print(i.strip())
