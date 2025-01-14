@@ -47,3 +47,19 @@ Code:
           s-=1
       print(" "*(2*(n-i))+" ".join(r))
 
+input
+7
+result
+ABCDEFGGFEDCBA
+ABCDEF  FEDCBA
+ABCDE    EDCBA
+ABCD      DCBA
+ABC        CBA
+AB          BA
+A            A
+Code:
+n=int(input())
+for i in range(n,0,-1):
+    l="".join(chr(ord('A')+j) for j in range(i))
+    r="".join(chr(ord('A')+j) for j in range(i-1,-1,-1))
+    print(l+" "*(2*(n-i))+r)
