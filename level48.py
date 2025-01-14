@@ -12,6 +12,7 @@ Code:
       r=[]
       for k in range(i):
           r.append(chr(s))
+          s-=1
       print(*r)
 
 input
