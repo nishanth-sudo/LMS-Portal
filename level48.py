@@ -29,3 +29,20 @@ Code:
           r.append(chr(s))
           s-=1
       print(*r)
+input
+4
+result
+      J
+    I H
+  G F E
+D C B A
+Code:
+  n=int(input())
+  s=ord('A')+(n*(n+1))//2-1
+  for i in range(1,n+1):
+      r=[]
+      for k in range(i):
+          r.append(chr(s))
+          s-=1
+      print(" "*(2*(n-i))+" ".join(r))
+
