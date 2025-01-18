@@ -35,3 +35,16 @@ Code:
       print(' '*s,end='')
       print((l+' ')*(2*i-1))
       a+=2
+
+input 5
+result
+5
+5 4 
+5 4 3 
+5 4 3 2
+5 4 3 2 1
+Code:
+  n=int(input())
+  for i in range(1,n+1):
+      r=[str(x) for x in range(n,n-i,-1)]
+      print(*r)
