@@ -23,3 +23,12 @@ for i in range(1,int(input())+1):
 Code:
   for i in range(1,int(input())+1):
       print((str(i)+' ')*i)
+
+A
+A B
+A B C
+Code:
+n=int(input())
+c=ord('A')
+for i in range(1,n+1):
+    print(' '.join(chr(c+j) for j in range(i)))
