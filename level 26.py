@@ -171,3 +171,18 @@ Code:
           print(*i)
   else:
       print("Matrix Subtraction Not Possible")
+
+sum of first column in a 2d matrix
+input
+5
+6
+7
+8
+result
+12
+Code:
+  import numpy as np
+  e=[int(input()) for _ in range(2*2)]
+  m=np.array(e).reshape(2,2)
+  re=np.sum(m[:,0])
+  print(re)
