@@ -49,3 +49,36 @@ Code:
       print("EVEN")
   else:
       print("ODD")
+
+sum of odd position in the array
+input
+5
+1
+2 
+8
+9 
+3
+result
+The sum of odd position in the array is 12
+Code:
+  n=int(input())
+  ar=[]
+  for i in range(1,n+1):
+      e=int(input())
+      ar.append(e)
+  s=sum([ar[i-1] for i in range(1,n+1) if i%2==1])
+  print("The sum of the odd position in the array is",s)
+
+all elements in the array same
+input
+3
+5 5 4
+result 
+NO
+Code:
+  n=int(input())
+  ar=list(map(int,input().split()))
+  if all(i==ar[0] for i in ar):
+      print("YES")
+  else:
+      print("NO")
