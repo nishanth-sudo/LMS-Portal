@@ -105,3 +105,69 @@ Code:
           if i==j:
               s=s+m[i][j]
   print("Addition of the right Diagonal elements is:",s)
+
+
+transpose of the given matrix
+input
+2
+3
+11
+22
+34
+41
+53
+65
+Result
+11 41
+22 53
+34 65
+Code:
+  import numpy as np
+  r=int(input())
+  c=int(input())
+  e=[int(input()) for _ in range(r*c)]
+  m=np.array(e).reshape(r,c)
+  t=m.T
+  for k in t:
+      print(*k)
+
+square of each element in a matrix
+2 2
+
+1 2
+3 4
+Result
+1 4
+9 16
+Code:
+  import numpy as np
+  r,c=map(int,input().split())
+  m=np.array([list(map(int,input().split())) for _ in range(r)])
+  re=np.square(m)
+  for i in re:
+      print(*i)
+
+print difference between two matrices
+2 2
+5 5
+5 5
+2 2
+4 3
+2 1
+Result
+1 2
+3 4
+Code:
+  import numpy as np
+  r1,c1=map(int,input().split())
+  m1=np.array([list(map(int,input().split())) for _ in range(r1)])
+  
+  r2,c2=map(int,input().split())
+  m2=np.array([list(map(int,input().split())) for _ in range(r2)])
+  
+  if r1==c1 and r2==c2:
+      re=m1-m2
+      for i in re:
+          print(*i)
+  else:
+      print("Matrix Subtraction Not Possible")
