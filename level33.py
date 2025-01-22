@@ -74,6 +74,6 @@ Code:
 n=int(input())
 s=input()
 for i in range(n):
-    print(" "*(n-i-1),s*(2*i+1))
+    print(" "*(n-i-1)+s*(2*i+1))
 for j in range(n-2,-1,-1):
-    print(' '*(n-j-1),s*(2*j+1))
+    print(' '*(n-j-1)+s*(2*j+1))
