@@ -77,3 +77,21 @@ for i in range(n):
     print(" "*(n-i-1)+s*(2*i+1))
 for j in range(n-2,-1,-1):
     print(' '*(n-j-1)+s*(2*j+1))
+
+input
+3
+result
+1
+1 *2
+1 *2 *3
+1 *2 *3
+1 *2
+1
+Code:
+def print_pattern(n):
+    for i in range(1, n + 1):
+        print(' '.join(str(x) if x == 1 else '*' + str(x) for x in range(1, i + 1)))
+    for j in range(n,0,-1):
+        print(' '.join(str(x) if x == 1 else '*' + str(x) for x in range(1, j + 1)))
+n = int(input())
+print_pattern(n)
